@@ -5,6 +5,7 @@ import cors from "cors";
 import { connectDB } from "./db/mongo";
 import router from "./router";
 import { cyan, green, magenta } from "kleur";
+import { initializeRedisSubscription } from "./db/redisSubscriber";
 
 const dotenv = require("dotenv").config();
 
@@ -17,6 +18,8 @@ async function connectToDatabase() {
 }
 
 connectToDatabase();
+
+initializeRedisSubscription();
 
 const app = express();
 app.use(

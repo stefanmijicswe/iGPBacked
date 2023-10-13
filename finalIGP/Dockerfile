@@ -1,4 +1,4 @@
-FROM node:16-slim
+FROM node:16
 
 WORKDIR /usr/src/app
 
@@ -8,6 +8,6 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 8080
+RUN npm run build
 
-CMD [ "npm", "start" ]
+CMD ["node", "dist/index.js"]
