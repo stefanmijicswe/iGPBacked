@@ -43,6 +43,20 @@ Incorporated within this project are several distinguished features:
   
 - **Skaffold for CI/CD**: To elevate the Kubernetes-based Continuous Integration and Continuous Deployment (CI/CD) experience, Skaffold was integrated. This ensures the Kubernetes pods remain synchronized with the latest code iterations.
 
+## Starting the Project
+
+To kickstart the project and have all services up and running inside the Kubernetes cluster, follow the steps below:
+
+1. Ensure `skaffold` is installed on your machine.
+2. Navigate to the project directory.
+3. Run the following command:
+
+    ```bash
+    skaffold dev
+    ```
+
+This command will start Skaffold, which will build your images, deploy your manifests to the Kubernetes cluster, and watch for changes in your source code and Kubernetes manifests.
+
 ## Future Discussions and Iterations
 
 The journey from a monolithic to a microservices infrastructure was enlightening. I eagerly anticipate diving into discussions around potential optimizations and enhancements for this application. For any insights, feedback, or innovative project ideas, I encourage an open dialogue.
