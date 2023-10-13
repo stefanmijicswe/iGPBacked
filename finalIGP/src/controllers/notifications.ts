@@ -1,5 +1,9 @@
 import express from "express";
-import { getNotificationsForUser, createNotification, deleteNotificationById } from "../db/notifications";
+import {
+  getNotificationsForUser,
+  createNotification,
+  deleteNotificationById,
+} from "../db/notifications";
 
 // Fetch all notifications for a user
 export const getUserNotifications = async (
@@ -8,7 +12,7 @@ export const getUserNotifications = async (
 ) => {
   try {
     const userId = req.params.id;
-    
+
     const notifications = await getNotificationsForUser(userId);
     return res.status(200).json(notifications);
   } catch (error) {
@@ -44,7 +48,7 @@ export const deleteNotification = async (
 ) => {
   try {
     const { id } = req.params;
-    
+
     const deletedNotification = await deleteNotificationById(id);
     return res.json(deletedNotification);
   } catch (error) {

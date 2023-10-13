@@ -15,11 +15,13 @@ Responsible for all user-centric operations, the Authentication Service integrat
 - **User Data Manipulation**: Providing users with the capability to update or delete their account information.
 - **User Profiles**: Comprehensive CRUD operations to manage user profiles.
 
-This service, constructed with Node.js and TypeScript, incorporates tools like Nodemon for instantaneous code reloading and the 'color' package for enriched logging. For data management, MongoDB serves as the dedicated database.
+**Postman Documentation**: [Auth Service API Documentation](https://documenter.getpostman.com/view/9685545/2s9YR56uvW)
 
 ### 2. Notification Service
 
 Designed to emulate the mechanism of dispatching notifications to targeted users, the Notification Service is a REST API-centric system. It dispatches data to a Redis Pub/Sub mechanism, which in turn can be consumed by other services, including the Authentication Service.
+
+**Postman Documentation**: [Notifications Service API Documentation](https://documenter.getpostman.com/view/9685545/2s9YR56uvX)
 
 ## Technology Stack
 
@@ -50,4 +52,4 @@ For inquiries or additional details concerning my work on this assignment, I rem
 Warm regards,
 
 Stefan Mijic  
-stefanmijic30@gmail.com
+[stefanmijic30@gmail.com](mailto:stefanmijic30@gmail.com)
