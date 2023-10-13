@@ -1,14 +1,17 @@
-apiVersion: skaffold/v2alpha4
+apiVersion: skaffold/v4beta3
 kind: Config
+manifests:
+  rawYaml:
+    - ./infra/k8s/*
 build:
+  local:
+    push: false
   artifacts:
     - image: stefanmijic/notification-service
-      context: notificationservice
-deploy:
-  kubectl:
-    remoteManifests:
-      - infra/k8s/notification-service/deployment.yaml
-      - infra/k8s/notification-service/service.yaml
-      - infra/k8s/redis/redis-pod.yaml
-      - infra/k8s/redis/redis-service.yaml
-
+      context: notification-service
+      sync:
+        manual:
+          - src: src/**/*.ts
+            dest: .
+      docker:
+        dockerfile: Dockerfile

@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: notification-service
+  name: ntf-depl
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: notification-service
+      app: ntf
   template:
     metadata:
       labels:
-        app: notification-service
+        app: ntf
     spec:
       containers:
-        - name: notification-service
+        - name: ntf
           image: stefanmijic/notification-service:latest
           ports:
             - containerPort: 3001

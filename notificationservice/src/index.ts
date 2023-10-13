@@ -34,5 +34,5 @@ app.post("/send-notification", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Notification service started on port ${PORT}`);
+  console.log(`Notification service starteeed on port ${PORT}`);
 });

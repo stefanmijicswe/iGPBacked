@@ -1,0 +1,14 @@
+apiVersion: skaffold/v2alpha4
+kind: Config
+build:
+  artifacts:
+    - image: stefanmijic/notification-service
+      context: notificationservice
+deploy:
+  kubectl:
+    remoteManifests:
+      - infra/k8s/notification-service/deployment.yaml
+      - infra/k8s/notification-service/service.yaml
+      - infra/k8s/redis/redis-pod.yaml
+      - infra/k8s/redis/redis-service.yaml
+
